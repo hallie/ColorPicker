@@ -88,13 +88,13 @@
                     </script>
                     <style type="text/css">
                         .red {
-                            width: 20px;
+                            width: 45px;
                         }
 			.green {
-			    width: 20px;
+			    width: 45px;
 			}
 			.blue {
-			    width: 20px;
+			    width: 45px;
 			}
                     </style>
 
@@ -107,9 +107,9 @@
 	                <td>2</td>
 	                <td>3</td>
 			<td>
-			    <input type="text" class="red" id="row1_R">
-			    <input type="text" class="green" id="row1_B">
-			    <input type="text" class="blue" id="row1_G">
+			    <input type="number" class="red" id="row1_R" value="255" min="0" max="255">
+			    <input type="number" class="green" id="row1_B" value="0" min="0" max="255">
+			    <input type="number" class="blue" id="row1_G" value="0" min="0" max="255">
 			</td>
 	                <td>
 				<input type='text' class="my_color" id="row1" value="red">			
@@ -200,7 +200,7 @@
 	                <td>2</td>
 	                <td>3</td>
 			<td>
-			    <input type="text" class="red">
+			    <input type="text" class="red" >
 			    <input type="text" class="green">
 			    <input type="text" class="blue">
 			</td>
