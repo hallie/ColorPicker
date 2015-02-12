@@ -33,6 +33,8 @@ $("#edit1").click(function() {
 		document.getElementById('row1_R').readOnly = false;
 		document.getElementById('row1_B').readOnly = false;
 		document.getElementById('row1_G').readOnly = false;
+		document.getElementById('update_1').disabled = false;
+	
 	} else {
 		var setColor = $("#row1").val();
 		var red = $('#row1_R').val();
@@ -44,6 +46,7 @@ $("#edit1").click(function() {
 		document.getElementById('row1_R').readOnly = true;
 		document.getElementById('row1_B').readOnly = true;
 		document.getElementById('row1_G').readOnly = true;
+		document.getElementById('update_1').disabled = true;
 	}
 	isDisabled = !isDisabled;
 	return false;
