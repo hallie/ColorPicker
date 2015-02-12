@@ -114,8 +114,6 @@
 			<script type='text/javascript' src='spectrum/setting-colors.js'></script>
 					<script type="text/javascript">
 						
-						$("#row1").
-						
 						var isDisabled = true;
 						$("#edit1").click(function()
 							{
@@ -128,10 +126,13 @@
 											['white', 'black', 'red'], ['yellow', 'orange','green'],
 											['blue', 'violet', 'brown']]);
 									$("#row1").spectrum("option","showPalette", true);
-									$("#row1").spectrum().on("dragstop.spectrum", function(e, color) {
-												alert(color.toRgbString());
+									
+									$("#row1").on("change.spectrum", function(e, color) {
+												$("#row1_R").val($("#row1").spectrum("get")._r);
+												$("#row1_B").val($("#row1").spectrum("get")._b);
+												$("#row1_G").val($("#row1").spectrum("get")._g);
 									});
-
+									
 									document.getElementById('row1_R').readOnly = false;
 									document.getElementById('row1_B').readOnly = false;
 									document.getElementById('row1_G').readOnly = false;
@@ -141,7 +142,7 @@
 									var blue = $('#row1_B').val();
 									var green = $('#row1_G').val();
 									//alert("Color changed to:\nRed: " + red + "\nBlue: " + blue + "\nGreen: " + green);
-									alert(setColor);
+									//alert(setColor);
 									$("#row1").spectrum("disable");
 									document.getElementById('row1_R').readOnly = true;
 									document.getElementById('row1_B').readOnly = true;
