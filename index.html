@@ -128,9 +128,9 @@
 									$("#row1").spectrum("option","showPalette", true);
 									
 									$("#row1").on("change.spectrum", function(e, color) {
-												$("#row1_R").val($("#row1").spectrum("get")._r);
-												$("#row1_B").val($("#row1").spectrum("get")._b);
-												$("#row1_G").val($("#row1").spectrum("get")._g);
+												$("#row1_R").val(Math.round($("#row1").spectrum("get")._r));
+												$("#row1_B").val(Math.round($("#row1").spectrum("get")._b));
+												$("#row1_G").val(Math.round($("#row1").spectrum("get")._g));
 									});
 									
 									document.getElementById('row1_R').readOnly = false;
