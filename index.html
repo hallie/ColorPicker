@@ -99,7 +99,8 @@
 			    </button>
 			</td>
 	                <td>
-				<input type='text' class="my_color" id="row1" onchange="updateRBG()" value="red">			
+				<input type='text' class="my_color" id="row1" name="row1" onchange="updateRBG()" value="red">
+				<em id='row1_label'></em>
 	                </td>
 	                <td>
 	                    <button type="button" id="edit1" class="btn btn-default btn-sm edit-user-defined-object-button">
@@ -112,7 +113,9 @@
 	            </tr>
 			<script type='text/javascript' src='spectrum/setting-colors.js'></script>
 					<script type="text/javascript">
-
+						
+						$("#row1").
+						
 						var isDisabled = true;
 						$("#edit1").click(function()
 							{
@@ -125,12 +128,14 @@
 											['white', 'black', 'red'], ['yellow', 'orange','green'],
 											['blue', 'violet', 'brown']]);
 									$("#row1").spectrum("option","showPalette", true);
+									$("#row1").spectrum().on("dragstop.spectrum", function(e, color) {
+												alert(color.toRgbString());
+									});
 
 									document.getElementById('row1_R').readOnly = false;
 									document.getElementById('row1_B').readOnly = false;
 									document.getElementById('row1_G').readOnly = false;
-								} else
-								{
+								} else {
 									var setColor = $("#row1").val();
 									var red = $('#row1_R').val();
 									var blue = $('#row1_B').val();

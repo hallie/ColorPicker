@@ -12,7 +12,13 @@ $(function() {
 $(".my_color").spectrum({
 		disabled:true
 	}); 
-			   
+
+$("#row1").spectrum({
+	showAlpha:true
+	}).on("dragstop.spectrum", function(e,c {
+		var label = $('#row1_label');
+		label.text("dragstop called (color is " + c.toHexString() + ")");
+	});			   
 /*		
 var isDisabled = true;
 $("#edit1").click(function() {
