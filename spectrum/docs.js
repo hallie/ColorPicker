@@ -13,7 +13,7 @@ $(".my_color").spectrum({
 		disabled:true
 	}); 
 			   
-			
+		
 var isDisabled = true;
 $("#edit1").click(function() {
     if (isDisabled) {
@@ -27,12 +27,15 @@ $("#edit1").click(function() {
         
 		document.getElementById('row1_R').readOnly = false;
         document.getElementById('row1_B').readOnly = false;
-       	document.getElementById('row1_G').readOnly = false;	         
+       	document.getElementById('row1_G').readOnly = false;	   
+       	
+       	    
     } else {
         var red = $('#row1_R').val();
     	var blue = $('#row1_B').val();
     	var green = $('#row1_G').val();
-    	alert("Color changed to:\nRed: " + red + "\nBlue: " + blue + "\nGreen: " + green);
+    	//alert("Color changed to:\nRed: " + red + "\nBlue: " + blue + "\nGreen: " + green);
+  
         $("#row1").spectrum("disable");
         document.getElementById('row1_R').readOnly = true;
         document.getElementById('row1_B').readOnly = true;
