@@ -5,20 +5,20 @@
     <meta charset="utf-8" http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
-    <link href="../assets/css/bootstrap.css" rel="stylesheet">
-	<link href="../assets/css/application.css" rel="stylesheet">
-    <link href="../assets/css/bootstrap-theme.css" rel="stylesheet">
-    <link href="../assets/css/bootstrap-datetimepicker.min.css" rel="stylesheet">
-    <link href="../assets/css/fuelux.min.css" rel="stylesheet">
-    <link href="../assets/css/dataTables.bootstrap.css" rel="stylesheet">
+    <link href="css/bootstrap.css" rel="stylesheet">
+	<link href="css/application.css" rel="stylesheet">
+    <link href="css/bootstrap-theme.css" rel="stylesheet">
+    <link href="css/bootstrap-datetimepicker.min.css" rel="stylesheet">
+    <link href="css/fuelux.min.css" rel="stylesheet">
+    <link href="css/dataTables.bootstrap.css" rel="stylesheet">
 
     <!-- Std libs -->
-	<script type="text/javascript" src="../assets/js/vendor/jquery.js"></script>
-	<script type="text/javascript" src="../assets/js/vendor/json2.js"></script>
-	<script type="text/javascript" src="../assets/js/vendor/underscore.js"></script>
-	<script type="text/javascript" src="../assets/js/vendor/bootstrap.js"></script>
-	<script type="text/javascript" src="../assets/js/vendor/fuelux.min.js"></script>
-	<script type="text/javascript" src="../assets/js/vendor/dataTables.bootstrap.js"></script>
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/json2.js"></script>
+	<script type="text/javascript" src="js/underscore.js"></script>
+	<script type="text/javascript" src="js/bootstrap.js"></script>
+	<script type="text/javascript" src="js/fuelux.min.js"></script>
+	<script type="text/javascript" src="js/dataTables.bootstrap.js"></script>
 	
 	
     
@@ -77,10 +77,19 @@
 	                <th>Length (ft.)</th>
 	                <th>Width (ft.)</th>
 	                <th>Height (ft.)</th>
+			<th>RGB</th>
 	                <th>Color</th>
 	                <th>Action</th>
 	            </tr>
 	            </thead>
+		    <script type="text/javascript">
+
+                    </script>
+                    <style type="text/css">
+                        .rgb {
+                            width: 20px;
+                        }
+                    </style>
 
 	            <tbody>
 	            <tr>
@@ -90,8 +99,13 @@
 	                <td>1</td>
 	                <td>2</td>
 	                <td>3</td>
-	                <td><input type='text' class="my_color" id="row1" value="red">
-						
+			<td>
+			    <input type="text" class="rgb" id="row1-r">
+			    <input type="text" class="rgb" id="row1-g">
+			    <input type="text" class="rgb" id="row1-b">
+			</td>
+	                <td>
+				<input type='text' class="my_color" id="row1" value="red">			
 	                </td>
 	                <td>
 	                    <button type="button" id="edit1" class="btn btn-default btn-sm edit-user-defined-object-button">
@@ -109,6 +123,12 @@
 	                <td>1</td>
 	                <td>2</td>
 	                <td>3</td>
+			<td>
+                            <input type="text" class="rgb" id="row2-r">
+                            <input type="text" class="rgb" id="row2-g">
+                            <input type="text" class="rgb" id="row2-b">
+                        </td>
+
 	                <td>
 	                	<input type='text' class="my_color"  id="row2"  value="blue">
 	               	</td>
@@ -128,6 +148,11 @@
 	                <td>1</td>
 	                <td>2</td>
 	                <td>3</td>
+			<td>
+                            <input type="text" class="rgb" id="row3-r">
+                            <input type="text" class="rgb" id="row3-g">
+                            <input type="text" class="rgb" id="row3-b">
+                        </td>
 	                <td><input type='text' class="my_color"  id="row3"  value="green"></td>
 	                <td>
 	                    <button type="button" class="btn btn-default btn-sm edit-user-defined-object-button">
@@ -145,6 +170,11 @@
 	                <td>1</td>
 	                <td>2</td>
 	                <td>3</td>
+			<td>
+                            <input type="text" class="rgb" id="row4-r">
+                            <input type="text" class="rgb" id="row4-g">
+                            <input type="text" class="rgb" id="row4-b">
+                        </td>
 	                <td><input type='text' class="my_color"  id="row4"  value="yellow"></td>
 	                <td>
 	                    <button type="button" class="btn btn-default btn-sm edit-user-defined-object-button">
@@ -162,6 +192,11 @@
 	                <td>1</td>
 	                <td>2</td>
 	                <td>3</td>
+			<td>
+                            <input type="text" class="rgb" id="row5-r">
+                            <input type="text" class="rgb" id="row5-g">
+                            <input type="text" class="rgb" id="row5-b">
+                        </td>
 	                <td><input type='text' class="my_color" id="row5"  value="orange"></td>
 	                <td>
 	                    <button type="button" class="btn btn-default btn-sm edit-user-defined-object-button">

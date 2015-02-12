@@ -1,0 +1,13 @@
+.sp-palette {
+max-width: 200px;
+}
+
+.label {
+    background: #444;
+    padding:8px;    
+    border-radius: 4px;
+    color: #eee;
+    margin-top: 10px;
+    display:inline-block;
+}
+
