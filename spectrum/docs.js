@@ -13,7 +13,7 @@ $(".my_color").spectrum({
 		disabled:true
 	}); 
 			   
-		
+/*		
 var isDisabled = true;
 $("#edit1").click(function() {
     if (isDisabled) {
@@ -45,7 +45,7 @@ $("#edit1").click(function() {
     isDisabled = !isDisabled;
     return false;
 });
-
+*/
 $("#full").spectrum({
     allowEmpty:true,
     color: "#ECC",

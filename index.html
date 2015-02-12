@@ -21,9 +21,9 @@
 	<script type="text/javascript" src="assets/js/vendor/fuelux.min.js"></script>
 	<script type="text/javascript" src="assets/js/vendor/dataTables.bootstrap.js"></script>
 	
-	
-    <!-- External js to handle behavior of HL/JS work -->
-	<script type="text/javascript" src="spectrum/synMods.js"></script>
+	<!-- External js to handle behavior of HL/JS work 
+	<script type="text/javascript" src="spectrum/synMods.js"></script>-->
+
     <!-- Spectrum-->
 	<link href="spectrum/spectrum.css" rel="stylesheet">
 	<script type="text/javascript" src="spectrum/spectrum.js"></script>
@@ -31,6 +31,7 @@
 	<script type="text/javascript" src="spectrum/toc.js"></script>
 		<!-- in order to put within every row simultaniously, must import 
 		javascript into docs.js, note my_color class on line 12 of docs -->
+	
 	
 
     
@@ -90,13 +91,13 @@
                     <style type="text/css">
                         .red {
                             width: 45px;
-                        }
-			.green {
-			    width: 45px;
-			}
-			.blue {
-			    width: 45px;
-			}
+			                        }
+						.green {
+						    width: 45px;
+						}
+						.blue {
+						    width: 45px;
+						}
                     </style>
 
 	            <tbody>
@@ -116,7 +117,7 @@
 					    </button>
 					</td>
 	                <td>
-				<input type='text' class="my_color" id="row1" value="red">			
+				<input type='text' class="my_color" id="row1" onchange="updateRBG()" value="red">			
 	                </td>
 	                <td>
 	                    <button type="button" id="edit1" class="btn btn-default btn-sm edit-user-defined-object-button">
@@ -127,6 +128,48 @@
 	                    </button>
 	                </td>
 	            </tr>
+	            	<script type="text/javascript">
+	            		updateRBG() {
+	            			var newColor = $("#row1").val();
+	            			$("#row1_R").value	            			
+	            			$("#row1_B").value	            			
+	            			$("#row1_G").value	            			
+	            			          			
+	            		}
+	            		var isDisabled = true;
+						$("#edit1").click(function() {
+						    if (isDisabled) {
+						        $("#row1").spectrum("enable");
+						        
+						        $("#row1").spectrum("option","showPaletteOnly", true);
+						        $("#row1").spectrum("option","palette",  [
+									        ['white', 'black', 'red'], ['yellow', 'orange','green'],
+									        ['blue', 'violet', 'brown']  ]);
+						        $("#row1").spectrum("option","showPalette", true);
+						        
+								document.getElementById('row1_R').readOnly = false;
+						        document.getElementById('row1_B').readOnly = false;
+						       	document.getElementById('row1_G').readOnly = false;	   
+						       	
+						       	    
+						    } else {
+						    	var setColor = $("#row1").val();
+						        var red = $('#row1_R').val();
+						    	var blue = $('#row1_B').val();
+						    	var green = $('#row1_G').val();
+						    	//alert("Color changed to:\nRed: " + red + "\nBlue: " + blue + "\nGreen: " + green);
+						  		alert(setColor);
+						        $("#row1").spectrum("disable");
+						        document.getElementById('row1_R').readOnly = true;
+						        document.getElementById('row1_B').readOnly = true;
+						       	document.getElementById('row1_G').readOnly = true;
+
+						    }
+						    isDisabled = !isDisabled;
+						    return false;
+						});
+						
+	            	</script>
 	            <tr>
 	                <td>2</td>
 	                <td>4567</td>
