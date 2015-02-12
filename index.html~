@@ -19,7 +19,6 @@
 	<script type="text/javascript" src="assets/js/vendor/bootstrap.js"></script>
 	<script type="text/javascript" src="assets/js/vendor/fuelux.min.js"></script>
 	<script type="text/javascript" src="assets/js/vendor/dataTables.bootstrap.js"></script>
-	<script type='text/javascript' src='assets/js/vendor/docs.js'></script>
 
     <!-- Spectrum -->
     	<link rel="stylesheet" type="text/css" href="spectrum/spectrum.css">
