@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link href="css/bootstrap.css" rel="stylesheet">
+	<link href="css/application.css" rel="stylesheet">
+    <link href="css/bootstrap-theme.css" rel="stylesheet">
+    <link href="css/bootstrap-datetimepicker.min.css" rel="stylesheet">
+    <link href="css/fuelux.min.css" rel="stylesheet">
+    <link href="css/dataTables.bootstrap.css" rel="stylesheet">
+
+    <!-- Std libs -->
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/jquery-1.9.1.js"></script>
+	<script type="text/javascript" src="js/json2.js"></script>
+	<script type="text/javascript" src="js/underscore.js"></script>
+	<script type="text/javascript" src="js/bootstrap.js"></script>
+	<script type="text/javascript" src="js/fuelux.min.js"></script>
+	<script type="text/javascript" src="js/dataTables.bootstrap.js"></script>
+	
+	
+    
+    <!-- Spectrum-->
+	<link href="spectrum/spectrum.css" rel="stylesheet">
+	<script type="text/javascript" src="spectrum/spectrum.js"></script>
+	<script type="text/javascript" src="spectrum/docs.js"></script>
+	<script type="text/javascript" src="spectrum/toc.js"></script>
+		<!-- in order to put within every row simultaniously, must import 
+		javascript into docs.js, note my_color class on line 12 of docs -->
+	
+
+    
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="../../app/bower_components/html5shiv/dist/html5shiv.js"></script>
+    <script src="../../app/bower_components/respond/src/respond.js"></script>
+    <![endif]-->
+    <!--<script type="text/javscript">
+    $(document).ready(function() {
+        var isIE = navigator.userAgent.indexOf(' MSIE ') > -1;
+        if(isIE) {
+            $('.modal').removeClass('fade');
+        }
+    });
+    </script>-->
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $("#example").dataTable({
+                "paging":   true,
+                "ordering": true
+            });
+
+        } );
+    </script>
+
+</head>
+
+	<body>
+		
+	    <div class="container">
+	        <h1>SPIDERS 3D - Custom Shapes</h1>
+	        <div class="container">
+	            <p>This is an explanation of Custom Shapes.</p>
+	        </div>
+	    </div>
+	    <div class="container-fluid">
+	        <button type="button" class="btn btn-primary add-new-user-defined-object-button"><span class="glyphicon glyphicon-plus"></span> Add Shape</button>
+	        <button type="button" class="btn btn-info add-new-user-defined-object-button"><span class="glyphicon glyphicon-cloud-upload"></span> Import Shapes</button>
+	        <table id="example" class="dt-responsive nowrap table table-striped table-bordered">
+	            <thead>
+	            <tr>
+	                <th>ID</th>
+	                <th>Code</th>
+	                <th>Description</th>
+	                <th>Length (ft.)</th>
+	                <th>Width (ft.)</th>
+	                <th>Height (ft.)</th>
+			<th>RGB</th>
+	                <th>Color</th>
+	                <th>Action</th>
+	            </tr>
+	            </thead>
+		    <script type="text/javascript">
+
+                    </script>
+                    <style type="text/css">
+                        .red {
+                            width: 20px;
+                        }
+			.green {
+			    width: 20px;
+			}
+			.blue {
+			    width: 20px;
+			}
+                    </style>
+
+	            <tbody>
+	            <tr>
+	                <td>1</td>
+	                <td>1234</td>
+	                <td>Cube 1</td>
+	                <td>1</td>
+	                <td>2</td>
+	                <td>3</td>
+			<td>
+			    <input type="text" class="red" id="row1">
+			    <input type="text" class="green" id="row1">
+			    <input type="text" class="blue" id="row1">
+			</td>
+	                <td>
+				<input type='text' class="my_color" id="row1" value="red">			
+	                </td>
+	                <td>
+	                    <button type="button" id="edit1" class="btn btn-default btn-sm edit-user-defined-object-button">
+	                        <span class="glyphicon glyphicon-pencil"></span> Edit
+	                    </button>
+	                    <button type="button" class="btn btn-default btn-sm delete-user-defined-object-button">
+	                        <span class="glyphicon glyphicon-trash"></span> Delete
+	                    </button>
+	                </td>
+	            </tr>
+	            <tr>
+	                <td>2</td>
+	                <td>4567</td>
+	                <td>Cube 2</td>
+	                <td>1</td>
+	                <td>2</td>
+	                <td>3</td>
+			<td>
+                            <input type="text" class="r" id="row2">
+                            <input type="text" class="g" id="row2">
+                            <input type="text" class="b" id="row2">
+                        </td>
+
+	                <td>
+	                	<input type='text' class="my_color"  id="row2"  value="blue">
+	               	</td>
+	                <td>
+	                    <button type="button" class="btn btn-default btn-sm edit-user-defined-object-button">
+	                        <span class="glyphicon glyphicon-pencil"></span> Edit
+	                    </button>
+	                    <button type="button" class="btn btn-default btn-sm delete-user-defined-object-button">
+	                        <span class="glyphicon glyphicon-trash"></span> Delete
+	                    </button>
+	                </td>
+	            </tr>
+	            <tr>
+	                <td>3</td>
+	                <td>89abc</td>
+	                <td>Cube 3</td>
+	                <td>1</td>
+	                <td>2</td>
+	                <td>3</td>
+			<td>
+                            <input type="text" class="r" id="row3">
+                            <input type="text" class="g" id="row3">
+                            <input type="text" class="b" id="row3">
+                        </td>
+	                <td><input type='text' class="my_color"  id="row3"  value="green"></td>
+	                <td>
+	                    <button type="button" class="btn btn-default btn-sm edit-user-defined-object-button">
+	                        <span class="glyphicon glyphicon-pencil"></span> Edit
+	                    </button>
+	                    <button type="button" class="btn btn-default btn-sm delete-user-defined-object-button">
+	                        <span class="glyphicon glyphicon-trash"></span> Delete
+	                    </button>
+	                </td>
+	            </tr>
+	            <tr>
+	                <td>4</td>
+	                <td>defg</td>
+	                <td>Cube 4</td>
+	                <td>1</td>
+	                <td>2</td>
+	                <td>3</td>
+			<td>
+                            <input type="text" class="r" id="row4">
+                            <input type="text" class="g" id="row4">
+                            <input type="text" class="b" id="row4">
+                        </td>
+	                <td><input type='text' class="my_color"  id="row4"  value="yellow"></td>
+	                <td>
+	                    <button type="button" class="btn btn-default btn-sm edit-user-defined-object-button">
+	                        <span class="glyphicon glyphicon-pencil"></span> Edit
+	                    </button>
+	                    <button type="button" class="btn btn-default btn-sm delete-user-defined-object-button">
+	                        <span class="glyphicon glyphicon-trash"></span> Delete
+	                    </button>
+	                </td>
+	            </tr>
+	            <tr>
+	                <td>5</td>
+	                <td>hijk</td>
+	                <td>Cube 5</td>
+	                <td>1</td>
+	                <td>2</td>
+	                <td>3</td>
+			<td>
+                            <input type="text" class="r" id="row5">
+                            <input type="text" class="g" id="row5">
+                            <input type="text" class="b" id="row5">
+                        </td>
+	                <td><input type='text' class="my_color" id="row5"  value="orange"></td>
+	                <td>
+	                    <button type="button" class="btn btn-default btn-sm edit-user-defined-object-button">
+	                        <span class="glyphicon glyphicon-pencil"></span> Edit
+	                    </button>
+	                    <button type="button" class="btn btn-default btn-sm delete-user-defined-object-button">
+	                        <span class="glyphicon glyphicon-trash"></span> Delete
+	                    </button>
+	                </td>
+	            </tr>
+	            </tbody>
+	        </table>
+	    </div>
+		
+		
+	
+		
+	</body>
+</html>
