@@ -83,7 +83,7 @@
 	                <th>Action</th>
 	            </tr>
 	            </thead>
-		    <script>
+		    <script type="text/javascript">
 
                     </script>
                     <style type="text/css">
@@ -131,10 +131,10 @@
 	                <td>2</td>
 	                <td>3</td>
 			<td>
-			    <input type="text" class="red" id="row1">
-			    <input type="text" class="green" id="row1">
-			    <input type="text" class="blue" id="row1">
-			</td>
+                            <input type="text" class="r" id="row2">
+                            <input type="text" class="g" id="row2">
+                            <input type="text" class="b" id="row2">
+                        </td>
 
 	                <td>
 	                	<input type='text' class="my_color"  id="row2"  value="blue">
@@ -156,10 +156,10 @@
 	                <td>2</td>
 	                <td>3</td>
 			<td>
-			    <input type="text" class="red" id="row1">
-			    <input type="text" class="green" id="row1">
-			    <input type="text" class="blue" id="row1">
-			</td>
+                            <input type="text" class="r" id="row3">
+                            <input type="text" class="g" id="row3">
+                            <input type="text" class="b" id="row3">
+                        </td>
 	                <td><input type='text' class="my_color"  id="row3"  value="green"></td>
 	                <td>
 	                    <button type="button" class="btn btn-default btn-sm edit-user-defined-object-button">
@@ -178,10 +178,10 @@
 	                <td>2</td>
 	                <td>3</td>
 			<td>
-			    <input type="text" class="red" id="row1">
-			    <input type="text" class="green" id="row1">
-			    <input type="text" class="blue" id="row1">
-			</td>
+                            <input type="text" class="r" id="row4">
+                            <input type="text" class="g" id="row4">
+                            <input type="text" class="b" id="row4">
+                        </td>
 	                <td><input type='text' class="my_color"  id="row4"  value="yellow"></td>
 	                <td>
 	                    <button type="button" class="btn btn-default btn-sm edit-user-defined-object-button">
@@ -200,10 +200,10 @@
 	                <td>2</td>
 	                <td>3</td>
 			<td>
-			    <input type="text" class="red" id="row1">
-			    <input type="text" class="green" id="row1">
-			    <input type="text" class="blue" id="row1">
-			</td>
+                            <input type="text" class="r" id="row5">
+                            <input type="text" class="g" id="row5">
+                            <input type="text" class="b" id="row5">
+                        </td>
 	                <td><input type='text' class="my_color" id="row5"  value="orange"></td>
 	                <td>
 	                    <button type="button" class="btn btn-default btn-sm edit-user-defined-object-button">
