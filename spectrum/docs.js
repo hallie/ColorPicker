@@ -12,47 +12,43 @@ $(function() {
 $(".my_color").spectrum({
 		disabled:true
 	}); 
-/*
-$("#row1").spectrum({
-    showAlpha: true
-}).on("dragstop.spectrum", function(e, c) {
-    var label = $("#row1_label");
-    label.text("dragstop called at " + prettyTime() + " (color is " + c.toHexString() + ")");
-});	
-*/	   
-/*		
 var isDisabled = true;
 $("#edit1").click(function() {
-    if (isDisabled) {
-        $("#row1").spectrum("enable");
-        
-        $("#row1").spectrum("option","showPaletteOnly", true);
-        $("#row1").spectrum("option","palette",  [
-			        ['white', 'black', 'red'], ['yellow', 'orange','green'],
-			        ['blue', 'violet', 'brown']  ]);
-        $("#row1").spectrum("option","showPalette", true);
-        
+	if (isDisabled)
+	{
+		$("#row1").spectrum("enable");
+		$("#row1").spectrum("option","showPaletteOnly", true);
+		$("#row1").spectrum("option","palette",  [
+				['white', 'black', 'red'], ['yellow', 'orange','green'],
+				['blue', 'violet', 'brown']]);
+		$("#row1").spectrum("option","showPalette", true);
+		
+		/*This is what updates the RGB text fields upon a change*/
+		$("#row1").on("change.spectrum", function(e, color) {
+					$("#row1_R").val(Math.round($("#row1").spectrum("get")._r));
+					$("#row1_B").val(Math.round($("#row1").spectrum("get")._b));
+					$("#row1_G").val(Math.round($("#row1").spectrum("get")._g));
+		});
+		
 		document.getElementById('row1_R').readOnly = false;
-        document.getElementById('row1_B').readOnly = false;
-       	document.getElementById('row1_G').readOnly = false;	   
-       	
-       	    
-    } else {
-        var red = $('#row1_R').val();
-    	var blue = $('#row1_B').val();
-    	var green = $('#row1_G').val();
-    	//alert("Color changed to:\nRed: " + red + "\nBlue: " + blue + "\nGreen: " + green);
-  
-        $("#row1").spectrum("disable");
-        document.getElementById('row1_R').readOnly = true;
-        document.getElementById('row1_B').readOnly = true;
-       	document.getElementById('row1_G').readOnly = true;
-
-    }
-    isDisabled = !isDisabled;
-    return false;
+		document.getElementById('row1_B').readOnly = false;
+		document.getElementById('row1_G').readOnly = false;
+	} else {
+		var setColor = $("#row1").val();
+		var red = $('#row1_R').val();
+		var blue = $('#row1_B').val();
+		var green = $('#row1_G').val();
+		//alert("Color changed to:\nRed: " + red + "\nBlue: " + blue + "\nGreen: " + green);
+		//alert(setColor);
+		$("#row1").spectrum("disable");
+		document.getElementById('row1_R').readOnly = true;
+		document.getElementById('row1_B').readOnly = true;
+		document.getElementById('row1_G').readOnly = true;
+	}
+	isDisabled = !isDisabled;
+	return false;
 });
-*/
+
 $("#full").spectrum({
     allowEmpty:true,
     color: "#ECC",
