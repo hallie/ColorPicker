@@ -231,7 +231,7 @@
 			    <input type="number" class="red" value="255" min="0" max="255">
 			    <input type="number" class="green" value="0" min="0" max="255">
 			    <input type="number" class="blue"  value="0" min="0" max="255">
-			    <button type="button">
+			    <button type="button" id="update_5">
 			    	 <span class="glyphicon glyphicon-ok"></span> Update
 			    </button>
 			</td>
